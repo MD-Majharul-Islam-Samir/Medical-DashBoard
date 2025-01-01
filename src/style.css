@@ -2,6 +2,7 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
         }
         .sidebar {
             height: 100vh;
@@ -65,7 +66,7 @@
             padding: 0 0 20px 0;
         }
         .topbar {
-            background-color: #f8f9fa;
+            background-color: white;
             padding: 10px;
             height: 90px;
             display: flex;
