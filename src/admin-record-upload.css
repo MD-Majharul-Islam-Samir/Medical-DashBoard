@@ -1,0 +1,167 @@
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.sidebar a {
+    padding: 11px 20px;
+    margin: 0 40px 30px 20px;
+    color: #A9A9A9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sidebar a:hover,
+.sidebar .active {
+    background-color: #3371EB;
+    color: white;
+    padding: 15px 30px;
+    margin: 0 40px 30px 20px;
+    
+}
+.sidebar .logo {
+    text-align: center;
+    margin: 20px 0;
+}
+.sidebar .logo img {
+    max-width: 100%;
+}
+
+#offcanvas-sidebar{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    a{
+        display: flex;
+        padding: 11px 20px;
+        margin: 0 40px 5px 20px;
+        color: #A9A9A9;
+        text-decoration: none;
+        align-items: center;
+        gap: 20px;
+    }
+    a:hover,.active{
+        
+        background-color: #3371EB;
+        color: white;
+        padding: 15px 30px;
+        margin: 0 40px 30px 20px;
+        
+    }
+}
+
+.main-content {
+    margin-left: 15%;
+    padding: 0 0 20px 0;
+}
+.topbar {
+    background-color: white;
+    padding: 10px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    .profile {
+        display: flex;
+        align-items: center;
+    }
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #F8F8F8;
+    height: 100vh
+}
+
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    height: 700px;
+    width: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    h2{
+        text-align: center;
+        
+
+    }
+
+}
+.upload-container {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0;
+    margin: 30px 0;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+
+.upload-text {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.supported-formats {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+#uploadFileBtn{
+    border-radius: 4px;
+    opacity: 0.5;
+    background: #F47621;
+
+}
+.upload-container:hover {
+    border-color: #999;
+}
+
+/* This CSS alone won't provide true drag-and-drop functionality */
+.upload-container.dragover {
+    border-color: #007bff;
+} 
+
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        /* position: static; */
+        display: none;
+    }
+    .sidebar.show {
+        display: block;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    
+    
+}
+
+
