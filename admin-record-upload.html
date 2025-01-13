@@ -194,67 +194,31 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="upload-section">
+
                     <h2>Upload</h2>
-                    <div class="upload-container" id="drop-area"></div>
+                    <div class="upload-container">
                         <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
                             <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4-4v2h16v-2h-16z"/>
                         </svg>
-                        <p class="upload-text">Drag & drop files or <a href="#" id="browseLink">Browse</a></p>
+                        <p class="upload-text">Drag & drop files or <a href="#fileInput">Browse</a></p>
                         <p class="supported-formats">Supported formats: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
                     </div>
                     <div class="form-group">
                         <label for="username" class="form-label">Mention the Dental Username</label>
                         <input type="text" class="form-control" id="username" placeholder="@dental_sumit342">
                     </div>
-                    <label for="fileInput" class="btn upload-files-btn" id="uploadFilesBtn">
+                    <label for="fileInput" class="btn  upload-files-btn  " id="uploadFilesBtn">
                         Upload Files
                     </label>
-                    <input type="file" id="fileInput" style="display: none;" multiple webkitdirectory>
+                        <input type="file" id="fileInput" style="display: none;">
+               </div>
                 </div>
-            </div>
             <div class="col-md-6">
                 <h2>Where does it come from?</h2>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
             </div>
         </div>
     </div>
-
-    <script>
-        const dropArea = document.getElementById('drop-area');
-        const fileInput = document.getElementById('fileInput');
-        const browseLink = document.getElementById('browseLink');
-
-        browseLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            fileInput.click();
-        });
-
-        dropArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropArea.classList.add('dragover');
-        });
-
-        dropArea.addEventListener('dragleave', () => {
-            dropArea.classList.remove('dragover');
-        });
-
-        dropArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropArea.classList.remove('dragover');
-            const files = e.dataTransfer.files;
-            handleFiles(files);
-        });
-
-        fileInput.addEventListener('change', (e) => {
-            const files = e.target.files;
-            handleFiles(files);
-        });
-
-        function handleFiles(files) {
-            // Handle the files here
-            console.log(files);
-        }
-    </script>
 
     <!-- upload here end  -->
 
